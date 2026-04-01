@@ -22,7 +22,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
 }
 
 body {
@@ -62,7 +61,7 @@ textarea {
 }
 
 section[id] {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 24px;
 }
 
 .section {
@@ -105,7 +104,7 @@ section[id] {
 }
 
 .brand__logo {
-  height: 120px;
+  height: 90px;
   width: auto;
   display: block;
 }
