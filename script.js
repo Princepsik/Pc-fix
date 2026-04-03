@@ -17,29 +17,29 @@ const pcItems = [
 
 const affiliateItems = [
   {
-    title: "SSD disk 1 TB",
-    store: "Doporučený nákup",
-    price: "od 1 690 Kč",
-    text:
-      "Skvělý upgrade pro starší notebook nebo PC. Výrazně zrychlí systém i běžnou práci.",
-    linkText: "Zobrazit doporučení",
+    title: "🎮 KCD II na ULTRA",
+    store: "Doporučeno",
+    price: "cca 27 000 Kč",
+    text: "Hotový herní počítač pro moderní hry na vysoké až ultra detaily bez řešení komponent.",
+    linkText: "Koupit na Alza.cz",
+    link: "https://www.alza.cz/..."
   },
   {
-    title: "16 GB RAM kit",
-    store: "Doporučený nákup",
-    price: "od 1 290 Kč",
-    text:
-      "Rozumná volba pro kancelářské i domácí počítače při více spuštěných aplikacích.",
-    linkText: "Zobrazit doporučení",
+    title: "🔧 Levnější upgrade pro KCD II",
+    store: "Postav si sám",
+    price: "cca 25 000 Kč",
+    text: "Podobný výkon za méně peněz, ideální pro vlastní stavbu nebo upgrade.",
+    linkText: "Zobrazit komponenty",
+    link: "https://www.alza.cz/..."
   },
   {
-    title: "Monitor 24–27 palců",
-    store: "Doporučený nákup",
-    price: "od 2 490 Kč",
-    text:
-      "Tipy na kvalitní monitory s dobrým poměrem cena / výkon pro práci i zábavu.",
+    title: "⚡ Upgrade staršího PC",
+    store: "Nejlepší poměr cena/výkon",
+    price: "od 2 500 Kč",
+    text: "SSD a RAM jsou nejrychlejší cesta, jak citelně zrychlit starší počítač.",
     linkText: "Zobrazit doporučení",
-  },
+    link: "https://www.alza.cz/..."
+  }
 ];
 
 // =====================
@@ -92,17 +92,17 @@ function renderAffiliateCards() {
 
   affiliateGrid.innerHTML = affiliateItems
     .map(
-      (item) => `
-    <article class="affiliate-card">
-      <div class="affiliate-card__top">
-        <div>
-          <span class="badge badge--ghost">${item.store}</span>
-          <h3>${item.title}</h3>
-        </div>
+      (item, index) => `
+    <article class="affiliate-card ${index === 0 ? "affiliate-card--featured" : ""}">
+      <div>
+        <span class="badge badge--ghost">${item.store}</span>
+        <h3>${item.title}</h3>
         <div class="affiliate-price">${item.price}</div>
       </div>
       <p>${item.text}</p>
-      <a href="#kontakt" class="affiliate-card__link">${item.linkText} →</a>
+      <a href="${item.link}" target="_blank" rel="noreferrer sponsored" class="affiliate-card__link">
+        ${item.linkText} <span aria-hidden="true">→</span>
+      </a>
     </article>
   `
     )
