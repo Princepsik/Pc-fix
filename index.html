@@ -388,23 +388,36 @@
 
             <div class="contact-actions">
               <div class="contact-row">
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=PCfix1991@gmail.com"
-                  target="_blank"
-                  class="btn btn--primary"
-                >
-                  Napsat e-mail
-                </a>
-                <span class="contact-inline">📧 Email: PCfix1991@gmail.com</span>
-              </div>
+                <div class="contact-actions">
+  <div class="contact-row">
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=PCfix1991@gmail.com"
+      target="_blank"
+      class="btn btn--primary"
+      onclick="gtag('event', 'email_click', {
+        event_category: 'contact',
+        event_label: 'email_button'
+      });"
+    >
+      Napsat e-mail
+    </a>
+    <span class="contact-inline">📧 Email: PCfix1991@gmail.com</span>
+  </div>
 
-              <div class="contact-row">
-                <a href="tel:+420777605477" class="btn btn--secondary">
-                  Zavolat
-                </a>
-                <span class="contact-inline">📞 Mobil: +420 777 605 477</span>
-              </div>
-            </div>
+  <div class="contact-row">
+    <a
+      href="tel:+420777605477"
+      class="btn btn--secondary"
+      onclick="gtag('event', 'phone_click', {
+        event_category: 'contact',
+        event_label: 'phone_button'
+      });"
+    >
+      Zavolat
+    </a>
+    <span class="contact-inline">📞 Mobil: +420 777 605 477</span>
+  </div>
+</div>
           </div>
         </div>
       </section>

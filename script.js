@@ -105,7 +105,16 @@ function renderAffiliateCards() {
         <div class="affiliate-price">${item.price}</div>
       </div>
       <p>${item.text}</p>
-      <a href="${item.link}" target="_blank" rel="noreferrer sponsored" class="affiliate-card__link">
+      <a 
+  href="${item.link}" 
+  target="_blank" 
+  rel="noreferrer sponsored"
+  class="affiliate-card__link"
+  onclick="gtag('event', 'affiliate_click', {
+    event_category: 'affiliate',
+    event_label: '${item.title}'
+  });"
+>
         ${item.linkText} <span aria-hidden="true">→</span>
       </a>
     </article>
