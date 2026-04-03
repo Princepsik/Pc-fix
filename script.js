@@ -53,6 +53,11 @@ const navToggle = document.getElementById("navToggle");
 const siteNav = document.getElementById("siteNav");
 const yearEl = document.getElementById("year");
 
+const termsModal = document.getElementById("termsModal");
+const openTermsModal = document.getElementById("openTermsModal");
+const closeTermsModal = document.getElementById("closeTermsModal");
+const termsModalBackdrop = document.getElementById("termsModalBackdrop");
+
 // =====================
 // RENDER PC
 // =====================
@@ -65,7 +70,7 @@ function renderPcCards(items) {
       (item) => `
     <article class="pc-card">
       <div class="pc-card__image">
-        <img src="${item.image}" alt="${item.title}">
+        <img src="${item.image}" alt="${item.title.replace(/<br\s*\/?>/gi, " ")}">
       </div>
       <div class="pc-card__body">
         <div class="pc-card__top">
@@ -140,15 +145,42 @@ filterButtons.forEach((button) => {
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  // klik na odkaz = zavřít menu
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       siteNav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     });
+  });
+}
+
+// =====================
+// MODAL - OBCHODNÍ PODMÍNKY
+// =====================
+
+if (termsModal && openTermsModal && closeTermsModal && termsModalBackdrop) {
+  const openModal = () => {
+    termsModal.classList.add("is-open");
+    termsModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  };
+
+  const closeModal = () => {
+    termsModal.classList.remove("is-open");
+    termsModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  };
+
+  openTermsModal.addEventListener("click", openModal);
+  closeTermsModal.addEventListener("click", closeModal);
+  termsModalBackdrop.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && termsModal.classList.contains("is-open")) {
+      closeModal();
+    }
   });
 }
 
