@@ -17,28 +17,28 @@ const pcItems = [
 
 const affiliateItems = [
   {
-    title: "🎮 KCD II na ULTRA",
-    store: "Doporučeno",
-    price: "cca 27 000 Kč",
-    text: "Hotový herní počítač pro moderní hry na vysoké až ultra detaily bez řešení komponent.",
-    linkText: "Koupit na Alza.cz",
-    link: "https://www.alza.cz/..."
+    title: "🎮 Herní PC pro náročné hry",
+    store: "Doporučený výběr",
+    price: "cca 25–45 000 Kč",
+    text: "Výběr herních PC s grafikami RTX 40, vhodný pro moderní hry ve Full HD i vyšších detailech. Odkaz vede na relevantní nabídku, ne na všechny počítače.",
+    linkText: "Zobrazit herní PC",
+    link: "https://m.alza.cz/herni-pc-s-nvidia-geforce-rtx-40xx/18904102.htm"
   },
   {
-    title: "🔧 Levnější upgrade pro KCD II",
-    store: "Postav si sám",
-    price: "cca 25 000 Kč",
-    text: "Podobný výkon za méně peněz, ideální pro vlastní stavbu nebo upgrade.",
-    linkText: "Zobrazit komponenty",
-    link: "https://www.alza.cz/..."
+    title: "⚡ SSD upgrade 1 TB",
+    store: "Konkrétní doporučení",
+    price: "dle aktuální ceny",
+    text: "WD Blue SN580 1TB je rozumný NVMe SSD upgrade pro výrazné zrychlení systému i aplikací.",
+    linkText: "Zobrazit SSD",
+    link: "https://www.alza.cz/wd-blue-sn580-1tb-d7844409.htm"
   },
   {
-    title: "⚡ Upgrade staršího PC",
-    store: "Nejlepší poměr cena/výkon",
-    price: "od 2 500 Kč",
-    text: "SSD a RAM jsou nejrychlejší cesta, jak citelně zrychlit starší počítač.",
-    linkText: "Zobrazit doporučení",
-    link: "https://www.alza.cz/..."
+    title: "🧠 RAM upgrade 16 GB DDR4",
+    store: "Konkrétní doporučení",
+    price: "dle aktuální ceny",
+    text: "Kingston FURY 16GB KIT DDR4 3200 MHz je vhodný upgrade pro starší i běžné herní sestavy s DDR4.",
+    linkText: "Zobrazit RAM",
+    link: "https://www.alza.cz/kingston-fury-16gb-kit-ddr4-3200mhz-cl16-beast-black-d6622616.htm"
   }
 ];
 
@@ -115,8 +115,8 @@ function renderAffiliateCards() {
     event_label: '${item.title}'
   });"
 >
-        ${item.linkText} <span aria-hidden="true">→</span>
-      </a>
+  ${item.linkText} <span aria-hidden="true">→</span>
+</a>
     </article>
   `
     )
