@@ -25,12 +25,12 @@ const affiliateItems = [
     link: "https://m.alza.cz/herni-pc-s-nvidia-geforce-rtx-40xx/18904102.htm"
   },
   {
-    title: "⚡ SSD upgrade 1 TB",
-    store: "Konkrétní doporučení",
-    price: "dle aktuální ceny",
-    text: "WD Blue SN580 1TB je rozumný NVMe SSD upgrade pro výrazné zrychlení systému i aplikací.",
-    linkText: "Zobrazit SSD",
-    link: "https://www.alza.cz/wd-blue-sn580-1tb-d7844409.htm"
+    title: "⚡ Zrychlení starého PC",
+    store: "Doporučeno",
+    price: "cca 3 500 – 4 000 Kč",
+    text: "Samsung 870 EVO 1TB je spolehlivý SSD disk, který výrazně zrychlí starší počítač nebo notebook.",
+    linkText: "Koupit na Alza.cz",
+    link: "https://www.alza.cz/samsung-870-evo-1tb-d6308918.htm"
   },
   {
     title: "🧠 RAM upgrade 16 GB DDR4",
